@@ -107,7 +107,7 @@ However, let's subclass `UIView` for the sake of clean code. Let's name it `Reac
 @end
 ```
 
-In a view controller that wants to manage this view, go ahead and add an outlet and wire it up:
+In a view controller that wants to manage this view, go ahead and add an outlet and wire it up in the interface builder:
 
 ```
 // ViewController.m
@@ -136,6 +136,7 @@ NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.b
 //   curl http://localhost:8081/index.ios.bundle -o main.jsbundle
 RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                     moduleName: @"SimpleApp"
+                                             initialProperties:nil
                                                  launchOptions:nil];
 ```
 
